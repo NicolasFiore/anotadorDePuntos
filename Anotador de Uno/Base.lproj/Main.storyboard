@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3yT-JN-0W9">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Zdv-mk-Ah3">
+            <objects>
+                <navigationController id="3yT-JN-0W9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wk1-KB-MJ4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="csY-FQ-gWM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2f-Gp-GoG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-715" y="-27"/>
+        </scene>
+        <!--ANOTADOR DE PUNTOS-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Anotador_de_Uno" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad de jugadores:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH8-uK-978">
+                                <rect key="frame" x="5" y="108" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="WZn-fz-DtG">
+                                <rect key="frame" x="294" y="103" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperJugadoresMasMenos:" destination="BYZ-38-t0r" eventType="valueChanged" id="XgG-fy-rkJ"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="número" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDZ-SX-kOH">
+                                <rect key="frame" x="187" y="108" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NWX-k7-piz">
+                                <rect key="frame" x="0.0" y="140" width="393" height="712"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NWX-k7-piz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3tO-SO-Lta"/>
+                            <constraint firstItem="sH8-uK-978" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="4ks-Kd-DWM"/>
+                            <constraint firstItem="xDZ-SX-kOH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="7x7-pV-M9I"/>
+                            <constraint firstAttribute="bottom" secondItem="NWX-k7-piz" secondAttribute="bottom" id="B6s-kG-wuQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WZn-fz-DtG" secondAttribute="trailing" constant="5" id="FNJ-M3-RRN"/>
+                            <constraint firstItem="WZn-fz-DtG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RSh-iI-m3K"/>
+                            <constraint firstItem="NWX-k7-piz" firstAttribute="top" secondItem="WZn-fz-DtG" secondAttribute="bottom" constant="5" id="UT6-61-3gQ"/>
+                            <constraint firstItem="sH8-uK-978" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="rji-AY-X4v"/>
+                            <constraint firstItem="NWX-k7-piz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x9o-Ii-g8A"/>
+                            <constraint firstItem="xDZ-SX-kOH" firstAttribute="leading" secondItem="sH8-uK-978" secondAttribute="trailing" constant="5" id="z4w-F9-AEy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ANOTADOR DE PUNTOS" id="d3s-dc-Mi9"/>
+                    <connections>
+                        <outlet property="cantidadJugadores" destination="xDZ-SX-kOH" id="Xda-ad-U5c"/>
+                        <outlet property="stepperJuadores" destination="WZn-fz-DtG" id="aE6-mg-a1q"/>
+                        <outlet property="tableView" destination="NWX-k7-piz" id="pWJ-nF-V8s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
